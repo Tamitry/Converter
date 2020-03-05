@@ -1,7 +1,10 @@
 package by.tarlikovski.converter.dao;
 
-import java.io.IOException;
+public class DaoFactory {
 
-public interface DaoFactory {
-    VocabularyDao getVocabulary() throws IOException;
+    private DaoFactory() {}
+
+    public static VocabularyDao getVocDao() throws DaoException {
+        return new VocabularyDaoImpl();
+    }
 }

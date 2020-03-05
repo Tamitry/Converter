@@ -10,16 +10,22 @@ public class VocabularyDaoImpl implements VocabularyDao {
     private Properties voc1;
     private Properties voc2;
 
-    public VocabularyDaoImpl() throws IOException {
+    public VocabularyDaoImpl() throws DaoException {
+        FileInputStream inputStream = null;
         try {
-            FileInputStream inputStream = new FileInputStream(VOCABULAR_1);
+            inputStream = new FileInputStream(VOCABULAR_1);
             voc1 = new Properties();
             voc1.load(inputStream);
             inputStream = new FileInputStream(VOCABULAR_2);
             voc2 = new Properties();
             voc2.load(inputStream);
         } catch (IOException e) {
-            throw new IOException(e);
+            throw new DaoException("Vocabular files not available.");
+        } finally {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+            }
         }
     }
 

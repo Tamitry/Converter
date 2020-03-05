@@ -1,0 +1,23 @@
+
+m
+=src/main/java/by/tarlikovski/converter/dao/VocabularyDao.java,1\5\1583ad581fe2722e0b54ddf900c9738f07666c81
+m
+=src/main/java/by/tarlikovski/converter/service/Converter.java,e\5\e50c48bbb1b207c1ed99d95bd96e385e75797deb
+q
+Asrc/main/java/by/tarlikovski/converter/dao/VocabularyDaoImpl.java,8\b\8bc863f6f2fd33dd6d7396c9d45194e824dee29c
+R
+"src/main/resources/voc1.properties,c\6\c6694d8b3c880e7a05fbf3e96764e74465c9afee
+P
+ src/test/resources/TestParam.csv,c\2\c2464ce1a565bafe2a2e613bd89b478949ba0b66
+q
+Asrc/test/java/by/tarlikovski/converter/service/ConverterTest.java,e\8\e878303a8d05c2120829fabc53dc87ffe92eeab1
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+q
+Asrc/main/java/by/tarlikovski/converter/service/ConverterImpl.java,0\8\08c4ba9468d2b5a8423cc2374d4a7365da7ad548
+k
+;src/main/java/by/tarlikovski/converter/control/Control.java,b\3\b3a16386d072afab35dc069925fef674988a5d47
+e
+5src/main/java/by/tarlikovski/converter/view/View.java,4\b\4ba184c6ae44c68653e05aa9532d3f24090e1b4a
+l
+<src/test/java/by/tarlikovski/converter/service/Generate.java,c\1\c11fd1e1e18575c8ad634d9b2343409969841639
