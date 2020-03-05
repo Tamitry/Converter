@@ -20,7 +20,7 @@ public class VocabularyDaoImpl implements VocabularyDao {
             voc2 = new Properties();
             voc2.load(inputStream);
         } catch (IOException e) {
-            throw new DaoException("Vocabular files not available.");
+            throw new DaoException("Vocabulary files not available.");
         } finally {
             try {
                 inputStream.close();
