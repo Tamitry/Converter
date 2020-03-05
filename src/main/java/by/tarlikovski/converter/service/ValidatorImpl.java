@@ -16,7 +16,7 @@ public class ValidatorImpl implements Validator {
 
     @Override
     public boolean validate(final String q) {
-        if (!q.matches("\\d+")) {
+        if (!q.matches("[\\d\\-]+")) {
             return false;
         }
         BigInteger val = new BigInteger(q);
