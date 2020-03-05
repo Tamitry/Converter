@@ -26,7 +26,7 @@ public class Control {
                 if (validator.validate(res)) {
                     control.getView().dialog(converter.convert(res));
                 } else {
-                    control.getView().dialog("Число больше, чем позволяет справочник.");
+                    control.getView().dialog("Число больше, чем позволяет справочник или неверный формат ввода.");
                 }
             }
         } catch (ServiceException e) {
