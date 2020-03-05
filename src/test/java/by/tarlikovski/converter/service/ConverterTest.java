@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.FileOutputStream;
 import java.util.HashSet;
@@ -39,6 +41,14 @@ public class ConverterTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/numbers.csv", delimiter = ':')
+    public void testConvertEqualFromFile(String num, String expected) throws DaoException {
+        Converter converter = new ConverterImpl(DaoFactory.getVocDao());
+        String actual = converter.convert(num);
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {"1234:одна тысяча двести тридцать четыре", "121255:сто двадцать одна тысяча двести пятьдесят пять"}, delimiter = ':')
     public void testConvertEqual(String num, String expected) throws DaoException {
         Converter converter = new ConverterImpl(DaoFactory.getVocDao());
         String actual = converter.convert(num);
